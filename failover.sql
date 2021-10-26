@@ -18,11 +18,12 @@ ALTER AVAILABILITY GROUP [AG_123] MODIFY REPLICA ON 'SERVER1' WITH (AVAILABILITY
 > Move-clusterGroup "Available Storage" -node Server2
 > Get-clusterGroup
 
-> Import-Module FailoverClusters
+
 > Get-ClusterQuorum
 > Set-ClusterQuorum -NodeAndFileShareMajority \\full\unc\path
 
-
+> Get-ClusterOwnerNode -Group "Cluster Group"
+> Set-ClusterOwnerNode -Group "Cluster Group" -Owners Server2
 
 ------------------------------------------------------------------------------------------
 -- DB or server setting that maybe are not the same

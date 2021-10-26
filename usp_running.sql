@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[usp_Currently_Running]
+CREATE PROCEDURE [dbo].[usp_Running]
 AS
 
 SET NOCOUNT ON
